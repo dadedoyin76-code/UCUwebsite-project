@@ -1,0 +1,1567 @@
+/* =====================================================
+   GENERAL SETTINGS
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #07184a;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =====================================================
+   HEADER & NAVIGATION
+===================================================== */
+
+.header {
+    height: 90px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.brand h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.brand p {
+    margin-top: 4px;
+    color: #6d7180;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+/* DESKTOP NAVIGATION */
+
+.navigation {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.navigation a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #17379b;
+}
+
+
+/* HAMBURGER MENU BUTTON */
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    background: #f8f9fc;
+}
+
+.menu-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #07184a;
+    border-radius: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero {
+    background: #fff12b;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 850px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =====================================================
+   ANNIVERSARY IMAGES
+===================================================== */
+
+.anniversary-images {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.anniversary-graphic,
+.anniversary-small {
+    position: absolute !important;
+    pointer-events: none;
+    object-fit: contain;
+}
+/* BIG TRANSLUCENT WATERMARK BACKGROUND */
+.anniversary-graphic {
+    width: 520px;
+    height: 400px;
+    left: 48%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.16;
+    z-index: 1;
+}
+
+/* SMALL CLEAR GRAPHIC */
+.anniversary-small {
+    width: 190px;
+    height: 150px;
+    right: 6%;
+    top: 42%;
+    transform: translateY(-50%);
+    opacity: 1;
+    z-index: 2;
+}
+
+
+/* UNIVERSITY LOGO AREA */
+
+.hero-logo-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 5;
+}
+
+.hero-logo-area img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.university-name {
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.motto {
+    margin-top: 5px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   50TH ANNIVERSARY PILL BADGE
+===================================================== */
+
+.anniversary-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: #17379b;
+    color: white;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 40px;
+    width: auto;
+    margin-bottom: 25px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 5;
+}
+
+.anniversary-number {
+    display: none;
+}
+
+.anniversary-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.anniversary-text span {
+    color: #ffffff;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.anniversary-text small {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   HERO HEADING & TEXT
+===================================================== */
+
+.hero h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(42px, 5.2vw, 70px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+    font-weight: 800;
+    max-width: 680px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 5;
+}
+
+.hero h1 span {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.hero h1 span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    height: 12px;
+    background: #ffcc18;
+    z-index: -1;
+}
+
+.hero-description {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #525663;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.primary-button,
+.dark-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 380px;
+    min-height: 60px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    z-index: 5;
+}
+
+.primary-button {
+    background: #17379b;
+    color: white;
+}
+
+.primary-button span,
+.dark-button span {
+    margin-left: 15px;
+    font-size: 22px;
+}
+
+.primary-button:hover,
+.dark-button:hover {
+    transform: translateY(-3px);
+    background: #102b7e;
+}
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 50px 8%;
+    gap: 30px;
+    background: white;
+}
+
+.stat strong {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(32px, 4vw, 45px);
+    font-weight: 800;
+    color: #143694;
+}
+
+.stat p {
+    margin-top: 8px;
+    color: #737786;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   TICKER BANNER
+===================================================== */
+
+.yellow-strip {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #fff12b;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+
+.ticker-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker 20s linear infinite;
+}
+
+.ticker-content span {
+    margin: 0 25px;
+    color: #9b7710;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* =====================================================
+   WEEKLY SCHEDULE + REACH US SIDEBAR
+===================================================== */
+
+.week-layout-container {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.reach-us-sidebar {
+    background: #f9f8f3;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    padding: 35px;
+    position: sticky;
+    top: 110px;
+}
+
+.reach-us-sidebar h2 {
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: #606572;
+    margin: 12px 0;
+    word-break: break-word;
+}
+
+.contact-details span {
+    color: #17379b;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact-form .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-form .input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #07184a;
+}
+
+.contact-form .input-group input,
+.contact-form .input-group textarea {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #d9d9d9;
+    background: #ffffff;
+    padding: 12px 16px;
+    color: #07184a;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form .input-group input {
+    height: 48px;
+}
+
+.contact-form .input-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.contact-form .input-group input:focus,
+.contact-form .input-group textarea:focus {
+    border-color: #17379b;
+    box-shadow: 0 0 0 3px rgba(23, 55, 155, 0.1);
+}
+
+.contact-submit-btn {
+    width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+/* =====================================================
+   SECTIONS & CARDS
+===================================================== */
+
+.section {
+    padding: 80px 8%;
+}
+
+.section-label {
+    color: #143694;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(32px, 5vw, 65px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.section-description {
+    max-width: 700px;
+    color: #686c78;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.meeting-grid,
+.programme-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.meeting-card,
+.programme-card {
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    padding: 35px;
+    background: white;
+}
+
+.programmes {
+    background: #f9f8f3;
+}
+
+.meeting-day {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.meeting-day span {
+    color: #17379b;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.meeting-card h3,
+.programme-card h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.meeting-card p,
+.programme-card p {
+    color: #686c78;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background: #ffcc18;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.location,
+.event-info {
+    color: #606572;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.location span,
+.event-info strong {
+    color: #17379b;
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   SERMONS & SPOTIFY EMBEDS
+===================================================== */
+
+.sermon-list {
+    margin-top: 40px;
+    max-width: 900px;
+}
+
+.sermon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.play-button {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    border: 0;
+    border-radius: 50%;
+    background: #17379b;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.sermon-embed-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 850px;
+}
+
+.sermon-card {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sermon-card iframe {
+    display: block;
+    width: 100%;
+}
+
+.spotify-redirect-area {
+    margin-top: 35px;
+}
+
+.spotify-btn {
+    background: #1db954;
+    color: #ffffff;
+}
+
+.spotify-btn:hover {
+    background: #179b45;
+}
+
+/* =====================================================
+   NEW STUDENT
+===================================================== */
+
+.new-student {
+    background: #ffcc18;
+    padding: 80px 8%;
+}
+
+.new-student h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(36px, 6vw, 75px);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 35px;
+}
+
+.dark-button {
+    background: #17379b;
+    color: white;
+    border: 2px solid #07184a;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #07184a;
+    color: white;
+    padding: 60px 8% 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-brand {
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-brand img {
+    width: 55px;
+}
+
+.footer-brand h2 {
+    font-size: 24px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a:hover {
+    color: #ffcc18;
+}
+
+.footer-week h3,
+.footer-contact h3 {
+    color: #9da5bf;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.footer-week p,
+.footer-contact p {
+    color: #c2c7d5;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.copyright {
+    grid-column: span 3;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 25px;
+    margin-top: 20px;
+    color: #8f98b2;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   MAP EMBED STYLES
+===================================================== */
+
+.map-container {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 200px;
+    border: 0;
+}
+
+
+/* =====================================================
+   CONNECT PAGE STYLES
+===================================================== */
+
+.connect-page {
+    background: #fdfdfb;
+}
+
+.back-link {
+    display: inline-block;
+    color: #17379b;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+.connect-header h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(36px, 5vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.connect-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    margin-top: 50px;
+    align-items: start;
+}
+
+.connect-card {
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.connect-card h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.connect-card p {
+    color: #686c78;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.leader-contact {
+    display: flex;
+    gap: 15px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.leader-avatar {
+    width: 45px;
+    height: 45px;
+    background: #17379b;
+    color: white;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.leader-contact strong {
+    display: block;
+    font-size: 16px;
+    color: #07184a;
+}
+
+.leader-contact p {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.chat-link {
+    display: inline-block;
+    color: #25d366;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.custom-select {
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid #d9d9d9;
+    background: #ffffff;
+    padding: 0 16px;
+    color: #07184a;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.custom-select:focus {
+    border-color: #17379b;
+}
+
+/* =====================================================
+   ABOUT PAGE STYLES
+===================================================== */
+
+.about-page {
+    background: #fdfdfb;
+}
+
+.about-hero h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.about-card {
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.story-card h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #07184a;
+}
+
+.story-card p {
+    color: #525660;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.story-card p:last-child {
+    margin-bottom: 0;
+}
+
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: #17379b;
+    color: #ffffff;
+    border: none;
+}
+
+.stat-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 15px;
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.stat-number {
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.values-section {
+    margin-top: 70px;
+}
+
+.values-section h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.value-card {
+    background: #ffffff;
+    border: 1px solid #e2e4e8;
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #07184a;
+}
+
+.value-card p {
+    color: #686c78;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.about-cta {
+    margin-top: 70px;
+    background: #f1f4fb;
+    border-radius: 24px;
+    padding: 50px 30px;
+    text-align: center;
+    border: 1px solid #d0d7ea;
+}
+
+.about-cta h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.about-cta p {
+    color: #525660;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   E-LIBRARY
+===================================================== */
+
+.elibrary {
+    background: #ffffff;
+}
+
+.library-grid {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.drive-folder-card {
+    background: #f1f4fb;
+    border: 1px solid #d0d7ea;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.drive-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.drive-icon {
+    font-size: 38px;
+    background: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.drive-info h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #07184a;
+}
+
+.drive-info p {
+    color: #525660;
+    font-size: 14px;
+}
+
+.drive-btn {
+    white-space: nowrap;
+}
+
+.featured-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: #ffffff;
+    border: 1px solid #e2e4e8;
+    border-radius: 18px;
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.book-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.book-card h4 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #07184a;
+}
+
+.book-card p {
+    color: #686c78;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.book-link {
+    color: #17379b;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+}
+/* =====================================================
+   GALLERY CAROUSEL
+===================================================== */
+
+.carousel-wrapper {
+    position: relative;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0 25px;
+    scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-slide {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    background: #ffffff;
+    border: 1px solid #e2e4e8;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.slide-caption {
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #07184a;
+    text-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #17379b;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.carousel-btn:hover {
+    background: #102b7e;
+    transform: scale(1.08);
+}
+
+.prev-btn {
+    left: -15px;
+}
+
+.next-btn {
+    right: -15px;
+}
+
+
+/* =====================================================
+   MEDIA QUERIES - RESPONSIVE LAYOUTS
+===================================================== */
+
+/* DESKTOP (Min-width: 901px) */
+@media (min-width: 901px) {
+    .hero-content {
+        width: min(620px, 58%);
+        max-width: 620px;
+    }
+
+    .anniversary-graphic {
+        width: clamp(430px, 43vw, 570px);
+        height: clamp(300px, 35vw, 430px);
+        left: auto !important;
+        right: 12% !important;
+        top: 52% !important;
+        transform: translateY(-50%) !important;
+        opacity: 0.13 !important;
+        z-index: 1 !important;
+    }
+
+    .anniversary-small {
+        width: clamp(145px, 15vw, 205px);
+        height: clamp(110px, 12vw, 165px);
+        left: auto !important;
+        right: 5% !important;
+        top: 22% !important;
+        transform: translateY(-50%) !important;
+        opacity: 1 !important;
+        z-index: 2 !important;
+    }
+
+    .hero h1,
+    .hero-description {
+        max-width: 610px;
+    }
+}
+
+/* TABLETS & MEDIUM SCREENS (1024px and below) */
+@media (max-width: 1024px) {
+    .week-layout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .reach-us-sidebar {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .navigation {
+        gap: 18px;
+    }
+
+    .navigation a {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1300px) {
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        z-index: 5;
+    }
+
+    .hero h1,
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .anniversary-small {
+        width: 150px;
+        height: auto;
+        left: auto !important;
+        right: 4% !important;
+        top: 15% !important;
+        transform: none !important;
+        opacity: 1 !important;
+        z-index: 6 !important;
+    }
+
+    .anniversary-graphic {
+        width: 480px;
+        height: auto;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        opacity: 0.10 !important;
+        z-index: 1 !important;
+    }
+}
+
+
+/* MOBILE NAVIGATION & GENERAL BREAKPOINTS (900px and below) */
+@media (max-width: 900px) {
+    .connect-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        padding: 30px 8%;
+        background: #07184a;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .navigation a {
+        color: white;
+        font-size: 18px;
+    }
+
+    #menu-toggle:checked ~ .navigation {
+        display: flex;
+    }
+}
+
+
+    .stat p {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .meeting-grid,
+    .programme-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand,
+    .copyright {
+        grid-column: span 1;
+    }
+
+    .drive-folder-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .drive-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel-slide {
+        flex: 0 0 260px;
+    }
+
+    .prev-btn {
+        left: 0;
+    }
+
+    .next-btn {
+        right: 0;
+    }
+}
+
+/* SMALL PHONES (480px and below) */
+@media (max-width: 480px) {
+    .header {
+        padding: 0 5%;
+    }
+
+    .brand h2 {
+        font-size: 16px;
+    }
+
+    .brand p {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .anniversary-graphic {
+        width: 108vw;
+        height: 82vw;
+        top: 47% !important;
+        opacity: 0.10 !important;
+    }
+
+    .anniversary-small {
+        width: 118px;
+        height: 94px;
+        right: 2% !important;
+        top: 35% !important;
+    }
+
+    .hero-logo-area img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .university-name {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .motto {
+        font-size: 13px;
+    }
+
+    .anniversary-badge {
+        width: 100%;
+        justify-content: center;
+        font-size: 9px;
+        padding: 9px 10px;
+    }
+
+    .anniversary-text {
+        gap: 6px;
+    }
+
+    .anniversary-text span,
+    .anniversary-text small {
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .statistics {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+}
+/* =====================================================
+   MOBILE & SMALL SCREENS (600px and below)
+===================================================== */
+@media (max-width: 600px) {
+
+    /* Allow hero to use full screen width */
+    .hero {
+        min-height: 0;
+        padding: 30px 6% 45px;
+        display: block;
+        overflow: hidden;
+    }
+
+    /* Expand text area across full width */
+    .hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        position: relative;
+        z-index: 5;
+    }
+
+    /* Keep top anniversary graphic centered above content */
+    .anniversary-small {
+        position: relative !important;
+        inset: auto !important;
+        transform: none !important;
+        margin: 0 0 15px 0 !important;
+        width: 140px !important;
+        height: auto !important;
+        display: block !important;
+        opacity: 1 !important;
+        z-index: 5;
+    }
+
+    /* Watermark graphic behind text */
+    .anniversary-graphic {
+        position: absolute !important;
+        width: 100vw !important;
+        height: auto !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        opacity: 0.10 !important;
+        z-index: 1 !important;
+    }
+
+    /* Headings and body text take full width */
+    .hero h1 {
+        max-width: 100% !important;
+        font-size: clamp(32px, 8.5vw, 48px);
+        line-height: 1.05;
+        letter-spacing: -1.5px;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        max-width: 100% !important;
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .primary-button {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+

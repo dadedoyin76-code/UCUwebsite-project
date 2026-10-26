@@ -1,0 +1,23 @@
+UCU automatic media updates
+============================
+
+What this changes
+- Spotify: the fixed episode embeds are replaced with an embed of the UCU Spotify show. Spotify manages the show content, so new published episodes can appear in the embedded show without editing this HTML.
+- YouTube: adds a separate media loader and Vercel serverless API endpoint to fetch recent uploads from the UCU channel (UC4fxI8JOj7zShpO7sxhyduQ), then render the latest eligible videos.
+- Existing inline gallery JavaScript is not edited; media-updates.js is a separate new file.
+
+Required Vercel setup
+1. Deploy the contents of this project folder to Vercel (keep the api/ folder at the project root).
+2. In Vercel Project Settings > Environment Variables, add YOUTUBE_API_KEY with a YouTube Data API v3 key from a Google Cloud project where YouTube Data API v3 is enabled.
+3. Restrict the key to YouTube Data API v3 and use API restrictions. The key is read only by the serverless endpoint; do not put it in HTML or media-updates.js.
+4. Redeploy after adding the environment variable.
+5. Test https://YOUR-DOMAIN/api/youtube-videos. It should return JSON with a videos array.
+
+Shorts handling limitation
+YouTube Data API does not provide a definitive isShort flag. This endpoint uses a conservative duration rule and only displays videos longer than 3 minutes, which should avoid most Shorts but may also exclude regular videos that are 3 minutes or shorter. If the union wants all short regular videos included while excluding every Short, a more specific classification/manual exception process will be needed.
+
+Refresh behavior
+- Spotify updates according to Spotify's embedded show/player behavior.
+- YouTube list is requested when the page loads; Vercel caches results for 15 minutes (with stale-while-revalidate up to 1 hour), so new uploads may take around 15 minutes or longer to appear.
+
+No credentials are included in this ZIP. The original gallery JavaScript was preserved; new functionality is isolated in media-updates.js and api/youtube-videos.js.

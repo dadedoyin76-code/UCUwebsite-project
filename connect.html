@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect With Us — Unilorin Christian Union</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="logo-area">
+            <a href="index.html" style="display: flex; align-items: center; gap: 15px;">
+                <img src="logo.png" alt="Unilorin CU Logo" class="logo">
+                <div class="brand">
+                    <h2>Unilorin Christian Union</h2>
+                    <p>OASIS IN THE DESERT</p>
+                </div>
+            </a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-button" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="navigation">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#week">Our Week</a>
+            <a href="index.html#programmes">Programmes</a>
+            <a href="index.html#sermons">Sermons</a>
+        </nav>
+    </header>
+
+    <!-- ================= CONNECT MAIN ================= -->
+    <main class="connect-page section">
+        <div class="connect-header">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <div class="section-label">NEW VISITORS & CONNECT</div>
+            <h1>We're so glad<br>you're here.</h1>
+            <p class="section-description">
+                Whether you're a fresher navigating Unilorin for the first time, looking for prayer support, or searching for a family away from home, we are ready to connect with you!
+            </p>
+        </div>
+
+        <div class="connect-grid">
+            
+            <!-- Quick Contacts Card -->
+            <div class="connect-card contacts-card">
+                <h3>Talk to Someone Directly</h3>
+                <p>Feel free to reach out to our fellowship leaders directly via call or WhatsApp:</p>
+
+                <div class="leader-contact">
+                    <div class="leader-avatar">CU</div>
+                    <div>
+                        <strong>Welfare & Freshers Team</strong>
+                        <p>For accommodation, campus navigation & general inquiries</p>
+                        <a href="https://wa.me/2349036452259" target="_blank" class="chat-link">💬 Chat on WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="leader-contact">
+                    <div class="leader-avatar">CU</div>
+                    <div>
+                        <strong>Prayer & Counseling Unit</strong>
+                        <p>For spiritual guidance, prayer requests & personal support</p>
+                        <a href="https://wa.me/2349036452259" target="_blank" class="chat-link">💬 Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inquiry & Request Form -->
+            <div class="connect-card form-card">
+                <h3>Send Us a Direct Inquiry</h3>
+                <p>Fill out this form and someone from our team will reach out to you within 24 hours.</p>
+
+                <form class="contact-form" action="https://formsubmit.co/dadedoyin76@gmail.com" method="POST">
+                    
+                    <div class="input-group">
+                        <label for="connect-name">Full Name</label>
+                        <input type="text" id="connect-name" name="name" placeholder="e.g. Grace Samuel" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="connect-email">Email Address</label>
+                        <input type="email" id="connect-email" name="email" placeholder="e.g. grace@student.unilorin.edu.ng" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="connect-phone">Phone Number / WhatsApp</label>
+                        <input type="tel" id="connect-phone" name="phone" placeholder="e.g. +234 812 345 6789" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="connect-category">Reason for Reaching Out</label>
+                        <select id="connect-category" name="category" class="custom-select" required>
+                            <option value="" disabled selected>Select an option...</option>
+                            <option value="New Student / First Visit">I'm a new student / First-time visitor</option>
+                            <option value="Prayer Request">I need Prayer Support</option>
+                            <option value="Counseling / Inquiry">Personal Counseling or Inquiry</option>
+                            <option value="Joining a Unit">I want to join a Fellowship Unit</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="connect-message">Your Message or Prayer Request</label>
+                        <textarea id="connect-message" name="message" rows="4" placeholder="Tell us how we can help or pray for you..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="primary-button contact-submit-btn">
+                        Submit Connection Request <span>→</span>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-brand">
+            <img src="logo.png" alt="Unilorin CU Logo">
+            <div>
+                <h2>Unilorin Christian Union</h2>
+                <p>OASIS IN THE DESERT</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html#programmes">Programmes</a>
+            <a href="index.html#sermons">Sermons</a>
+            <a href="connect.html">Connect With Us</a>
+        </div>
+
+        <div class="footer-week">
+            <h3>THIS WEEK</h3>
+            <p><strong>Sunday</strong> · 6:00 PM<br>Sunday Worship Service</p>
+            <p><strong>Monday</strong> · 5:00 PM<br>Evangelism Day</p>
+            <p><strong>Tuesday</strong> · 6:30 PM<br>Prayer Meeting</p>
+            <p><strong>Thursday</strong> · 6:30 PM<br>Bible Study</p>
+        </div>
+
+        <div class="footer-contact">
+            <h3>REACH US</h3>
+            <p>⌖ University of Ilorin, Ilorin, Kwara State</p>
+            <p>✉ ucu4christ@gmail.com</p>
+            <p>☎ +234 812 345 6789</p>
+        </div>
+
+        <p class="copyright">© 2026 Unilorin Christian Union. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
